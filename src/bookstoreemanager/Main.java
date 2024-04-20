@@ -1,21 +1,40 @@
-package bookstoreemanager;
+package MainBookstoreManager;
+
+import BookstoreManager.Author;
+import BookstoreManager.Book;
+import BookstoreManager.Customer;
+import BookstoreManager.FictionBook;
+import BookstoreManager.NonFictionBook;
+import BookstoreManager.Order;
+import BookstoreManager.SalesManager;
+import BookstoreManager.InventoryManager;
 
 public class Main {
     public static void main(String[] args) {
-        Author author = new Author("J.K. Rowling");
-        Book book = new Book("Harry Potter", author, 29.99);
-        Customer customer = new Customer("Bader", "1234567890");
+        Author author = new Author("Colleen Hoover");
+        Customer customer = new Customer("Rahaf", "0509709409");
         Order order = new Order(customer);
-        order.addBook(book);
+
+        // Create FictionBook & NonFictionBook by Factory Method
+        
+        Book fictionBook = new FictionBook("It Ends with Us", author, 150.40);
+        order.addBook(fictionBook);
+
+        
+        Book nonFictionBook = new NonFictionBook("The Power of Now", author, 100.99);
+        order.addBook(nonFictionBook);
 
         SalesManager salesManager = new SalesManager();
         salesManager.processOrder(order);
+        
+        // Singleton instance
 
-        InventoryManager inventoryManager = new InventoryManager();
-        inventoryManager.addBook(book);
+        InventoryManager inventoryManager = InventoryManager.getInstance(); 
+        inventoryManager.addBook(fictionBook);
+        inventoryManager.addBook(nonFictionBook);
 
-        System.out.println("Book ordered: " + order.getBooks().get(0).getTitle());
+        System.out.println("Book Name: " + order.getBooks().get(0).getTitle());
         System.out.println("Total price: " + order.getTotalPrice());
-        System.out.println("Buyer: " + customer.getName());
+        System.out.println("The Buyer: " + customer.getName());
     }
 }
