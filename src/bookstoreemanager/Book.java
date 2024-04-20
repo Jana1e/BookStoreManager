@@ -1,6 +1,6 @@
 package BookstoreManager;
 
-public abstract class Book {
+public abstract class Book implements BookType {
     private String title;
     private Author author;
     private double price;
