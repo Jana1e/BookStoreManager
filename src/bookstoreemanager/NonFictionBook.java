@@ -1,4 +1,4 @@
-package BookstoreeManager;
+package BookstoreManager;
 
 public class NonFictionBook extends Book {
     public NonFictionBook(String title, Author author, double price) {
