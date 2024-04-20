@@ -1,6 +1,6 @@
 package BookstoreManager;
-
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class SalesManager {
     private List<Order> orders;
@@ -13,12 +13,7 @@ public class SalesManager {
         orders.add(order);
     }
 
-    // Getters and setters
     public List<Order> getOrders() {
         return orders;
-    }
-
-    public void setOrders(List<Order> orders) {
-        this.orders = orders;
     }
 }
