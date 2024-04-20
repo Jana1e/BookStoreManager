@@ -1,13 +1,5 @@
-package MainBookstoreManager;
+package BookstoreManager;
 
-import BookstoreManager.Author;
-import BookstoreManager.Book;
-import BookstoreManager.Customer;
-import BookstoreManager.FictionBook;
-import BookstoreManager.NonFictionBook;
-import BookstoreManager.Order;
-import BookstoreManager.SalesManager;
-import BookstoreManager.InventoryManager;
 
 public class Main {
     public static void main(String[] args) {
