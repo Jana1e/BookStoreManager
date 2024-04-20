@@ -1,6 +1,6 @@
 package BookstoreManager;
-
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Order {
     private Customer customer;
@@ -18,28 +18,17 @@ public class Order {
         totalPrice += book.getPrice();
     }
 
-    // Getters and setters
     public Customer getCustomer() {
         return customer;
-    }
-
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
     }
 
     public List<Book> getBooks() {
         return books;
     }
 
-    public void setBooks(List<Book> books) {
-        this.books = books;
-    }
-
     public double getTotalPrice() {
         return totalPrice;
     }
 
-    public void setTotalPrice(double totalPrice) {
-        this.totalPrice = totalPrice;
-    }
 }
+   
