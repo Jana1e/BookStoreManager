@@ -1,4 +1,4 @@
-package bookstoreemanager;
+package bookstoremanager;
 
 import java.util.*;
 
