@@ -1,12 +1,20 @@
-package bookstoreemanager;
-
-import java.util.*;
+package BookstoreManager;
+import java.util.ArrayList;
+import java.util.List;
 
 public class InventoryManager {
+    private static InventoryManager instance;
     private List<Book> books;
 
-    public InventoryManager() {
+    private InventoryManager() {
         this.books = new ArrayList<>();
+    }
+
+    public static InventoryManager getInstance() {
+        if (instance == null) {
+            instance = new InventoryManager();
+        }
+        return instance;
     }
 
     public void addBook(Book book) {
@@ -17,12 +25,8 @@ public class InventoryManager {
         books.remove(book);
     }
 
-    // Getters and setters
     public List<Book> getBooks() {
         return books;
     }
-
-    public void setBooks(List<Book> books) {
-        this.books = books;
-    }
+    
 }
