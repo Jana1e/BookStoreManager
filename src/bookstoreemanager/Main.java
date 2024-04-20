@@ -1,5 +1,4 @@
-package BookstoreManager;
-
+package BookstoreeManager;
 
 public class Main {
     public static void main(String[] args) {
@@ -8,19 +7,16 @@ public class Main {
         Order order = new Order(customer);
 
         // Create FictionBook & NonFictionBook by Factory Method
-        
-        Book fictionBook = new FictionBook("It Ends with Us", author, 150.40);
+        Book fictionBook = BookFactory.createBook("It Ends with Us", author, 150.40, "Fiction");
         order.addBook(fictionBook);
 
-        
-        Book nonFictionBook = new NonFictionBook("The Power of Now", author, 100.99);
+        Book nonFictionBook = BookFactory.createBook("The Power of Now", author, 100.99, "Non-Fiction");
         order.addBook(nonFictionBook);
 
         SalesManager salesManager = new SalesManager();
         salesManager.processOrder(order);
-        
-        // Singleton instance
 
+        // Singleton instance
         InventoryManager inventoryManager = InventoryManager.getInstance(); 
         inventoryManager.addBook(fictionBook);
         inventoryManager.addBook(nonFictionBook);
