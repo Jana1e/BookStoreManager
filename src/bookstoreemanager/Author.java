@@ -1,5 +1,6 @@
-package bookstoreemanager;
-import java.util.*;
+package BookstoreManager;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Author {
     private String name;
@@ -14,20 +15,12 @@ public class Author {
         books.add(book);
     }
 
-    // Getters and setters
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public List<Book> getBooks() {
         return books;
     }
 
-    public void setBooks(List<Book> books) {
-        this.books = books;
-    }
 }
