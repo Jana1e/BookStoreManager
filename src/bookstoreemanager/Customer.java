@@ -1,4 +1,4 @@
-package bookstoreemanager;
+package BookstoreManager;
 
 public class Customer {
     private String name;
@@ -9,20 +9,12 @@ public class Customer {
         this.contact = contact;
     }
 
-    // Getters and setters
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getContact() {
         return contact;
     }
 
-    public void setContact(String contact) {
-        this.contact = contact;
-    }
 }
